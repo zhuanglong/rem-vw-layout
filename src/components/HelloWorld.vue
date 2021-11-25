@@ -1,15 +1,19 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, getCurrentInstance } from 'vue'
 
 defineProps({
   msg: String
 })
 
 const count = ref(0)
+
+// script 中使用
+const { $px2rem } = getCurrentInstance().appContext.config.globalProperties
+console.log($px2rem(30))
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 :style="{ fontSize: $px2rem(30) /* template 中使用 */ }">{{ msg }}</h1>
 
   <p>
     Recommended IDE setup:
@@ -33,8 +37,14 @@ const count = ref(0)
   </p>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../design/flexible/flexible.scss';
+
 a {
   color: #42b983;
+}
+
+h1 {
+  font-size: px2rem(30);
 }
 </style>
