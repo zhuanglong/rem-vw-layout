@@ -21,7 +21,7 @@ html {
 
 ## 使用
 
-在 global 中引入
+在 global.scss 中引入
 
 ```
 @import './flexible/flexible.scss';
