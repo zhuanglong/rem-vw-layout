@@ -1,5 +1,16 @@
 // ****** vw + rem 适配移动端 ******
 
+// 移动端，响应式布局
+// var rate = 0.6,std; // 375/(1/.16) /100 = 0.6
+// var ret = [320, 360, 375, 400, 414, 440, 480, 520, 560, 600, 640, 680, 720, 750].map(i=>{
+//   var num = (i/0.6).toFixed(5).replace(/\.[0]+$/,'');
+//   if(i==375) std = num
+//   return ('@media (min-width:'+i+'px){html{font-size:'+ num +'% !important;}}')
+//  }
+// ).join('\r\n') + '\r\n@media (min-width:768px){html{font-size:'+ std +'% !important;}}';
+// copy(ret);
+// console.log(ret);
+
 // 设计稿宽度
 $designWidth: 375;
 // 设定 1rem = 100px
